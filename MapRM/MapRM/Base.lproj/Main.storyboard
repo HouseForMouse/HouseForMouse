@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lYy-Gh-BCr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Silom.ttf">
+            <string>Silom</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="JCf-8L-lUX">
+            <objects>
+                <viewController id="ERD-oU-N2b" customClass="MapVC" customModule="MapRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uw0-n9-nBb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-pu-Uo7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="diD-yG-vTg"/>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gjb-pu-Uo7" firstAttribute="top" secondItem="Uw0-n9-nBb" secondAttribute="top" id="3TQ-sE-5jb"/>
+                            <constraint firstItem="Gjb-pu-Uo7" firstAttribute="bottom" secondItem="diD-yG-vTg" secondAttribute="bottom" id="3qp-3W-uYN"/>
+                            <constraint firstItem="Gjb-pu-Uo7" firstAttribute="leading" secondItem="diD-yG-vTg" secondAttribute="leading" id="KiC-YT-Ffh"/>
+                            <constraint firstItem="Gjb-pu-Uo7" firstAttribute="trailing" secondItem="diD-yG-vTg" secondAttribute="trailing" id="gdZ-kE-Ysz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" selectedImage="flag.circle" catalog="system" id="MmK-Yx-y8J"/>
+                    <connections>
+                        <outlet property="mapView" destination="Gjb-pu-Uo7" id="XzS-pR-Mdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJB-Ve-0kZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239.13043478260872" y="29.464285714285712"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="WOV-Zg-aig">
+            <objects>
+                <viewController id="MWq-Vf-r8l" customClass="LocationVC" customModule="MapRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vuw-5u-FIb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cA-CO-3av">
+                                <rect key="frame" x="0.0" y="64" width="414" height="143"/>
+                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="56"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_background" translatesAutoresizingMaskIntoConstraints="NO" id="wg9-Ud-nm3">
+                                <rect key="frame" x="106" y="284" width="202" height="289"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-io-8jo">
+                                <rect key="frame" x="30" y="389" width="354" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="UD5-LN-z3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Lat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huZ-En-bT9">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="36"/>
+                                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dataLat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsA-Qh-KC6">
+                                                <rect key="frame" x="119" y="0.0" width="235" height="36"/>
+                                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="9Id-lM-HYS">
+                                        <rect key="frame" x="0.0" y="43" width="354" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Lon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="aYT-QH-7AV">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="36"/>
+                                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dataLon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="2w5-OH-6aI">
+                                                <rect key="frame" x="122" y="0.0" width="232" height="36"/>
+                                                <fontDescription key="fontDescription" name="Silom" family="Silom" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q03-Nd-mpH"/>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q03-Nd-mpH" firstAttribute="trailing" secondItem="Aer-io-8jo" secondAttribute="trailing" constant="30" id="8Br-tG-04r"/>
+                            <constraint firstItem="1cA-CO-3av" firstAttribute="top" secondItem="Q03-Nd-mpH" secondAttribute="top" constant="20" id="JQ4-9h-OVQ"/>
+                            <constraint firstItem="wg9-Ud-nm3" firstAttribute="centerX" secondItem="Q03-Nd-mpH" secondAttribute="centerX" id="T7c-LO-hkt"/>
+                            <constraint firstItem="wg9-Ud-nm3" firstAttribute="centerY" secondItem="Q03-Nd-mpH" secondAttribute="centerY" id="dIm-o2-ofg"/>
+                            <constraint firstItem="Aer-io-8jo" firstAttribute="centerX" secondItem="Q03-Nd-mpH" secondAttribute="centerX" id="fXq-sR-Vz6"/>
+                            <constraint firstItem="Aer-io-8jo" firstAttribute="leading" secondItem="Q03-Nd-mpH" secondAttribute="leading" constant="30" id="gz1-aL-U1L"/>
+                            <constraint firstItem="Aer-io-8jo" firstAttribute="centerY" secondItem="Q03-Nd-mpH" secondAttribute="centerY" id="mqu-Cz-VQs"/>
+                            <constraint firstItem="1cA-CO-3av" firstAttribute="trailing" secondItem="Q03-Nd-mpH" secondAttribute="trailing" id="qoW-hH-PMY"/>
+                            <constraint firstItem="1cA-CO-3av" firstAttribute="leading" secondItem="Q03-Nd-mpH" secondAttribute="leading" id="weW-oU-Y94"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Location" selectedImage="paperplane" catalog="system" id="Mcw-2u-tmx"/>
+                    <connections>
+                        <outlet property="dataLat" destination="FsA-Qh-KC6" id="2yM-8c-7nE"/>
+                        <outlet property="dataLon" destination="2w5-OH-6aI" id="M8v-bP-Zww"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iol-mz-tQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="644"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tuT-ds-l4l">
+            <objects>
+                <tabBarController id="lYy-Gh-BCr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OqU-Xy-v9W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MWq-Vf-r8l" kind="relationship" relationship="viewControllers" id="fzc-Et-M7p"/>
+                        <segue destination="ERD-oU-N2b" kind="relationship" relationship="viewControllers" id="X0p-LG-7jN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rbS-ye-BeQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flag.circle" catalog="system" width="128" height="121"/>
+        <image name="icon_background" width="202" height="289"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+    </resources>
+</document>
